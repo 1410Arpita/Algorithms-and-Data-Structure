@@ -67,15 +67,21 @@ class MyLinkedList {
         }
         else{
             Node p = head;
-            for (int i=0; i< index -1; i++){
-                p = p.next;
+            Node prev = null;
+            for (int i=0; i< index; i++){
+                prev = p;
+                p = p.next;  
             }
-        Node n = new Node(val);
-            Node save = p;
-            p = p.next;
-            save.next = n;
+            
+            Node n = new Node(val);
+            prev.next = n;
             n.next = p;
             size++;
+        
+            // Node save = p;
+            // p = p.next;
+            // save.next = n;
+            // n.next = p;
         }
         
     }

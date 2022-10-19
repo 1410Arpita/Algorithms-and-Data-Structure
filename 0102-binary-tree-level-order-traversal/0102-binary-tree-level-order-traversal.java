@@ -18,7 +18,7 @@ class Solution {
         List<List<Integer>> result = new ArrayList<>();
         if (root == null) return result;
         Deque<TreeNode> queue = new ArrayDeque<>();
-        queue.add(root);
+        queue.offer(root);
         while (!queue.isEmpty()) {
             int qlen = queue.size();
             List<Integer> row = new ArrayList<>();
